@@ -57,13 +57,16 @@ public class GameManager : MonoBehaviour
         multiText.text = "MULTIPLIER: x" + currentMulitplier;
         currentScore += scorePerNote * currentMulitplier;
         scoreText.text = "SCORE: " + currentScore;
-        
+        Debug.Log("hit");
+
     }
     public void NoteMiss()
     {
+        Debug.Log("miss");
         currentMulitplier = 1;
         mulitplierTracker = 0;
         multiText.text = "MULTIPLIER: x" + currentMulitplier;
+        
     }
 }
 
