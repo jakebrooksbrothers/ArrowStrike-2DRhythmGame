@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int currentScore;
     public int scorePerNote = 100;
+    public int scorePerGoodNote = 125;
+    public int scorePerPerfectNote = 150;
 
     public int currentMulitplier;
     public int mulitplierTracker;
@@ -67,6 +69,21 @@ public class GameManager : MonoBehaviour
         mulitplierTracker = 0;
         multiText.text = "MULTIPLIER: x" + currentMulitplier;
         
+    }
+    public void NormalHit()
+    {
+        currentScore += scorePerNote * currentMulitplier;
+        NoteHit();
+    }
+    public void GoodHit()
+    {
+        currentScore += scorePerGoodNote * currentMulitplier;
+        NoteHit();
+    }
+    public void PerfectHit()
+    {
+        currentScore += scorePerPerfectNote * currentMulitplier;
+        NoteHit();
     }
 }
 
