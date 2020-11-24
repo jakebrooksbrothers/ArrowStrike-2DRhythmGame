@@ -1,32 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class UIcontroller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Difficulty()
-    {
 
+    public void Difficulty()
+    {
         SceneManager.LoadScene("DifficultyScene");
     }
 
-    // Update is called once per frame
-    void Play()
+    public void Play()
     {
-
         SceneManager.LoadScene("PlayScene");
     }
 
-    void Credits()
+    public void Credits()
     {
-        
         SceneManager.LoadScene("CreditScene");
     }
 
-    void Back()
+    public void Back()
     {
-
         SceneManager.LoadScene("MenuScene");
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
